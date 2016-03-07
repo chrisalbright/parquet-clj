@@ -39,9 +39,4 @@
 (def < lt)
 (def <= le)
 
-
-(def && and)
-(def || or)
-(def ! not)
-
 (defn predicate->filter ^FilterCompat$Filter [^FilterPredicate predicate] (FilterCompat/get predicate))
