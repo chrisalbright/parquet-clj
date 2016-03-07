@@ -9,7 +9,7 @@
 
   (let [path (hdfs/make-path "/Users/chris/Downloads/000000000536203187-000000000536211414.parquet")
         enterpriseId (filter/long-column "advertiserEnterpriseId")
-        predicate (filter/eq enterpriseId 1501378)
+        predicate (filter/= enterpriseId 1501378)
         records (read/parquet-seq path predicate)]
 
     (doseq [record records] (prn record))))
